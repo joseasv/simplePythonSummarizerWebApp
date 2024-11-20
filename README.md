@@ -1,4 +1,4 @@
-# Dockerized Python example web app
+# Simple Python Summarizer Web App
 
 This a small web app that does an extractive summary from a txt file using nltk. React is used for the frontend and FastAPI for the backend with an OpenAPI POST endpoint,
 
