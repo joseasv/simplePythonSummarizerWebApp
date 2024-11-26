@@ -5,7 +5,7 @@ from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-from server.summarizer import generate_summary
+from backend.summarizer import generate_summary
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -90,7 +90,7 @@ def get_openapi_endpoint():
     return JSONResponse(content=generate_openapi_schema())
 
 
-app.mount("/", StaticFiles(directory="server/dist", html=True))
+app.mount("/", StaticFiles(directory="backend/dist", html=True))
 
 
 @app.get("/")
